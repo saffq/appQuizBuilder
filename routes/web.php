@@ -25,3 +25,15 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/contact', function (){
+    return view('contact');
+});
+Route::get('/', function () {
+    $posts = App\Post::all();
+    return view('home', compact('posts'));
+});
+Route::get('post/{slug}', function($slug){
+    $post = App\Post::where('slug', '=', $slug)->firstOrFail();
+    return view('post', compact('post'));
+});
