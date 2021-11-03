@@ -173,7 +173,9 @@ return [
         // which role add premissions to
         'default_role' => 'admin',
     ],
-
+    'providers' => [
+        Larapack\VoyagerHooks\VoyagerHooksServiceProvider::class,
+    ],
     /*
     |--------------------------------------------------------------------------
     | UI Generic Config

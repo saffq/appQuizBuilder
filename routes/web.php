@@ -30,10 +30,15 @@ Route::get('/contact', function (){
     return view('contact');
 });
 Route::get('/', function () {
-    $posts = App\Post::all();
+    $posts = App\Models\Post::all();
     return view('home', compact('posts'));
 });
 Route::get('post/{slug}', function($slug){
-    $post = App\Post::where('slug', '=', $slug)->firstOrFail();
+    $post = App\Models\Post::where('slug', '=', $slug)->firstOrFail();
     return view('post', compact('post'));
 });
+Route::get('/quiz', function () {
+ return view('quiz');
+});
+Route::get('contact', 'ContactController@contact');
+Route::post('contact', ['as'=>'contact.store','uses'=>'ContactController@contactPost']);
