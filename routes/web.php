@@ -29,16 +29,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/contact', function (){
     return view('contact');
 });
-Route::get('/', function () {
-    $posts = App\Models\Post::all();
-    return view('home', compact('posts'));
-});
+Route::get('/', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
 Route::get('post/{slug}', function($slug){
     $post = App\Models\Post::where('slug', '=', $slug)->firstOrFail();
     return view('post', compact('post'));
 });
-Route::get('/quiz', function () {
- return view('quiz');
-});
-Route::get('contact', 'ContactController@contact');
-Route::post('contact', ['as'=>'contact.store','uses'=>'ContactController@contactPost']);
+Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
+Route::post('/contact', ['as'=>'contact.store','uses'=>'\App\Http\Controllers\ContactController@contactPost']);
+
