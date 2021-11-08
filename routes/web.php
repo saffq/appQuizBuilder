@@ -29,7 +29,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/contact', function (){
     return view('contact');
 });
-Route::get('/', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
+Route::get('/', function (){
+    return view('welcome');
+});
+Route::get('/test-1', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
 Route::get('post/{slug}', function($slug){
     $post = App\Models\Post::where('slug', '=', $slug)->firstOrFail();
     return view('post', compact('post'));

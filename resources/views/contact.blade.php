@@ -2,10 +2,14 @@
 <html>
 <head>
     <title>Contact Form</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<head>
+    @include('head')
 </head>
 <body>
-
+<header class="row">
+    @include('header')
+</header>
 <div class="container">
     <h1>Contact Me</h1>
 
