@@ -20,9 +20,9 @@
            <button type="button" class="btn btn-secondary" onclick="location.href='{{$exams['link']}}';" style="margin-top: 20px; height: 80px;    box-shadow: 5px 5px 10px rgba(0,0,0,.6);"> {{$exams['desc']}}</button>
         @endforeach
 </div>
-    <footer class="row">
-        @include('footer')
-    </footer>
 </div>
+<footer class="row">
+    @include('footer')
+</footer>
 </body>
 </html>
