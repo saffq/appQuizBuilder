@@ -23,9 +23,9 @@ class ContactController extends Controller
                 'bodyMessage' => $request->get('message')
             ), function($message)
             {
-                $message->from('bobby@bobbyiliev.com');
-                $message->to('bobby@bobbyiliev.com', 'Bobby')->subject('Bobby Site Contect Form');
+                $message->from('test@test.com');
+                $message->to('test@test.com', 'test')->subject('test');
             });
-        return back()->with('success', 'Thank you for contacting me!');
+        return back()->with('success', 'Thank you for contacting us!');
     }
 }

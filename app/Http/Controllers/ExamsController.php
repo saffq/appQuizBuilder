@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Exam;
 class ExamsController extends Controller
 {
     public function exams()
 
-    { $data = exams::simplePaginate(1);
-        return view('exams',['exams'=>$data]);
+    {
+        $data = Exam::all();
+        return view('welcome',['welcome'=>$data]);
 
     }
+    public function examsHeader(){
+        $data = Exam::all();
+        return view('header',['header'=>$data]);
+    }
+
 }

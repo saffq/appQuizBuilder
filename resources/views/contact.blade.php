@@ -5,13 +5,15 @@
 </head>
 <head>
     @include('head')
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 <header class="row">
     @include('header')
 </header>
-<div class="container">
-    <h1>Contact Me</h1>
+
+<div id="contact" class="container mt-sm-5 my-1" style="background-color: white !important;">
+    <h1>Contact Us</h1>
 
     @if(Session::has('success'))
         <div class="alert alert-success">
@@ -19,7 +21,7 @@
         </div>
     @endif
 
-    {!! Form::open(['route'=>'contact.store']) !!}
+    {!! Form::open(['route'=>'contact']) !!}
 
     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
         {!! Form::label('Name:') !!}
@@ -46,6 +48,9 @@
     {!! Form::close() !!}
 
 </div>
+<footer class="row">
+    @include('footer')
+</footer>
 
 </body>
 </html>

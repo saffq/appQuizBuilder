@@ -1,46 +1,30 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    background-color: red;
+}
 body {
-
-
-}
-h3 {
-    text-align: center;
-}
-h2 {
-    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+    display: flex;
+    background-color: rgb(236, 236, 236) !important;
+    justify-content: center;
+    flex-direction: column;
 }
 #pagination {
     text-align: center !important;
     margin-top: 50px;
 
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
-
-body {
-    background-color: #333 !important;
-}
 
 .container {
-    background-color: #555;
-    color: #ddd;
-    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+    border-radius: 5px;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-    max-width: 700px
+    max-width: 700px;
+    margin-left: 50px ;
 }
 
 .container>p {
@@ -49,6 +33,9 @@ body {
 
 .question {
     width: 75%
+}
+#copyright\ text-right {
+    color: black;
 }
 
 .options {

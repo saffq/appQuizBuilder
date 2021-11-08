@@ -1,2 +1,5 @@
-<div id="copyright text-right" style="position: fixed; bottom: 0px;left: 0px;
-right: 0px; margin-bottom: 0px;">© Copyright Yax Interactive</div>
+<div id="copyright text-right" style="position: fixed;
+ /* Will not center vertically and won't work in IE6/7. */
+left: 0;
+right: 0;
+bottom: 0;"><a href="https://yaxint.com/pl" target="_blank" style=" text-decoration: none; color: black">© Copyright Yax Interactive</a></div>
