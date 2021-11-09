@@ -31,11 +31,9 @@ Route::get('/contact', function (){
 });
 Route::get('/', [\App\Http\Controllers\ExamsController::class, 'exams'])->name('welcome');
 Route::get('/header', [\App\Http\Controllers\ExamsController::class, 'exams'])->name('welcome');
-Route::get('/test-1', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
-Route::get('post/{slug}', function($slug){
-    $post = App\Models\Post::where('slug', '=', $slug)->firstOrFail();
-    return view('post', compact('post'));
-});
+Route::get('/{key}', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
+Route::POST('/{key}', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
+Route::resource('posts','PostController');
 Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
 Route::post('/contact', ['as'=>'contact.store','uses'=>'\App\Http\Controllers\ContactController@contactPost']);
 

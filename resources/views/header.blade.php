@@ -17,7 +17,7 @@
                 <li class="nav-item" style="margin-right: 0px">
                     <a class="nav-link" href="/admin">Login</a>
                 </li>
-                <hr class="rounded">
+
             </ul>
 
         </div>

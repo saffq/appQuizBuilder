@@ -48,7 +48,7 @@
     {!! Form::close() !!}
 
 </div>
-<footer class="row">
+<footer class="row" style="bottom: 0 !important; position: fixed">
     @include('footer')
 </footer>
 

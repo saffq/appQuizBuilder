@@ -13,6 +13,7 @@ class ExamsController extends Controller
         return view('welcome',['welcome'=>$data]);
 
     }
+
     public function examsHeader(){
         $data = Exam::all();
         return view('header',['header'=>$data]);
