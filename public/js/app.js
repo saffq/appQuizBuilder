@@ -2102,7 +2102,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('ExampleComponent', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
   el: '#app'
 });

@@ -32,8 +32,8 @@ Route::get('/contact', function (){
 Route::get('/', [\App\Http\Controllers\ExamsController::class, 'exams'])->name('welcome');
 Route::get('/header', [\App\Http\Controllers\ExamsController::class, 'exams'])->name('welcome');
 Route::get('/{key}', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
-Route::POST('/{key}', [\App\Http\Controllers\TestsController::class, 'tests'])->name('tests');
 Route::resource('posts','PostController');
 Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
 Route::post('/contact', ['as'=>'contact.store','uses'=>'\App\Http\Controllers\ContactController@contactPost']);
-
+Route::post('/{key}', [\App\Http\Controllers\TestsController::class, 'checkAnswers']);
+Route::post('/score', [\App\Http\Controllers\TestsController::class, 'tests'])->name('score');

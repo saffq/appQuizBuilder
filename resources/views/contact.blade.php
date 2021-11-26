@@ -14,7 +14,7 @@
 
 <div id="contact" class="container mt-sm-5 my-1" style="background-color: white !important;">
     <h1>Contact Us</h1>
-
+    <h2>Tell us about something</h2>
     @if(Session::has('success'))
         <div class="alert alert-success">
             {{ Session::get('success') }}
