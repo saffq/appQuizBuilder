@@ -16,7 +16,7 @@
     @include('header')
 </header>
 <div class="container" style="width: 500px; height: 50%; margin-top: 100px;text-align: center">
-<h1>Your score:</h1>
+<p style="font-size: 20pt">You've completed the Quiz!</p>
 <div class="score">
 {{$scoreArray['points']}}  / {{$scoreArray['total']}} Points
 </div>
